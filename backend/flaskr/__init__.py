@@ -298,7 +298,7 @@ def create_app(test_config=None):
 
     TEST: In the "List" tab / main screen, clicking on one of the
     categories in the left column will cause only questions of that
-    category to be shown.
+    category to be displayed.
     """
     @app.route(f'{BASE_URL}/categories/<int:category_id>/questions')
     def get_questions_by_category(category_id):
@@ -331,7 +331,7 @@ def create_app(test_config=None):
 
     TEST: In the "Play" tab, after a user selects "All" or a category,
     one question at a time is displayed, the user is allowed to answer
-    and shown whether they were correct or not.
+    and the result is shown whether they were correct or not.
     """
     @app.route(f'{BASE_URL}/quizzes', methods=['POST'])
     def load_quiz():
